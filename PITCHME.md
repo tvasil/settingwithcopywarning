@@ -11,7 +11,7 @@ SettingwithCopyWarning   @fa[tired]
 
 ---
 @title[The error]
-# The problem
+# The problems
 +++?color=lavender
 @title[Intro to error]
 
@@ -39,5 +39,4 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 @[3-9](You check it out - oh oh! looks like there's a NaN for jake7870)
 @[11](You decide to tackle the problem the best way you know)
 @[13-17](...until this nasty *Warning* appears!)
-
 
