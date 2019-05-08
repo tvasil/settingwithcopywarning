@@ -5,7 +5,7 @@
 SettingwithCopyWarning   @fa[tired]
 @snapend
 
-@snap[west byline text-white text-06]
+@snap[south-west byline text-white text-06]
 *Why you sometimes break Pandas and how to deal with it*
 @snapend
 
