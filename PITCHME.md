@@ -10,10 +10,12 @@ SettingwithCopyWarning @fa[tired]
 @snapend
 
 ---
-@title[Slide Markdown]
 
-
-
++++?code=template/src/go/server.go&lang=golang
+@title[Intro example]
+@[1,3-6](Present code found within any repository source file.)
+@[8-18](Without ever leaving your slideshow.)
+@[19-28](Using GitPitch code-presenting with (optional) annotations.)
 
 ---
 @title[Slide Markdown]
