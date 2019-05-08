@@ -5,11 +5,13 @@
 SettingwithCopyWarning@fa[tired]
 @snapend
 
-@snap[south-west byline text-white text-06]
+@snap[west byline text-white text-06]
 *Why you sometimes break Pandas and how to deal with it*
 @snapend
 
 ---
+@title[The error]
+# The problem
 +++?color=lavender
 @title[Intro to error]
 
