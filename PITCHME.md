@@ -1,4 +1,4 @@
----?color=linear-gradient(180deg, white 70%, #E71E60 30%)
+---?color=linear-gradient(180deg, white 70%, #FFD221 30%)
 @title[Title Slide]
 
 @snap[west text-15 text-bold]
@@ -11,8 +11,8 @@
 
 ---
 @title[The error]
-# The problems
-+++?color=lavender
+# The problem
++++?color=#C2E1C2
 @title[Intro to error]
 
 ```python3
