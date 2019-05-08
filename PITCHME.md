@@ -2,7 +2,7 @@
 @title[Title Slide]
 
 @snap[west text-15 text-bold text-black]
-SettingwithCopyWarning@fa[tired]
+SettingwithCopyWarning   @fa[tired]
 @snapend
 
 @snap[west byline text-white text-06]
