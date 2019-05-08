@@ -1,13 +1,13 @@
 ---?color=linear-gradient(180deg, white 70%, #E71E60 30%)
 @title[Title Slide]
 
-@snap[west text-15 text-bold text-black]
-SettingwithCopyWarning   @fa[tired]
+@snap[west text-15 text-bold]
+# @color[black](SettingwithCopyWarning)   @fa[tired]
+<br>
+<br>
+#### @color[white](*Why you sometimes break Pandas and how to deal with it*)
 @snapend
 
-@snap[south-west byline text-white text-06]
-*Why you sometimes break Pandas and how to deal with it*
-@snapend
 
 ---
 @title[The error]
