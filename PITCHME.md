@@ -1,4 +1,4 @@
----?color=linear-gradient(180deg, white 30%, #232354 50%)
+---?color=linear-gradient(180deg, white 70%, #232354 30%)
 @title[Title Slide]
 
 @snap[west text-25 text-bold text-black]
