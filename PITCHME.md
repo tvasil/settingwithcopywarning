@@ -1,71 +1,43 @@
----?color=linear-gradient(to right, #c02425, #f0cb35)
-@title[Introduction]
+---?color=linear-gradient(180deg, white 70%, #E71E60 30%)
+@title[Title Slide]
 
-<!--
-Tip! Get started with this template as follows:
-Step 1. Delete the contents of this PITCHME.md file.
-Step 2. Start adding your own custom slide content.
-Step 3. Copy slide markdown snippets from template/md directory as needed.
--->
-
-@snap[west text-25 text-bold text-white]
-GitPitch<br>*The Template*
+@snap[west text-15 text-bold text-black]
+SettingwithCopyWarning   @fa[tired]
 @snapend
 
 @snap[south-west byline text-white text-06]
-The Fastest Way From Idea To Presentation.
+*Why you sometimes break Pandas and how to deal with it*
 @snapend
 
 ---
-@title[Slide Markdown]
+@title[The error]
+# The problem
++++?color=lavender
+@title[Intro to error]
 
-### Each slide in this presentation is provided as a *template*.
+```python3
+import pandas as pd
+df = pd.read_csv('Xbox 3-day auctions.csv')
+df
+    auctionid    bid   bidtime          bidder  bidderrate  openbid  price
+0  8213034705   95.0  2.927373        jake7870         NaN     95.0  117.5
+1  8213034705  115.0  2.943484   davidbresler2           1     95.0  117.5
+2  8213034705  100.0  2.951285  gladimacowgirl          58     95.0  117.5
+3  8213034705  117.5  2.998947         daysrus          10     95.0  117.5
+4  8213060420    2.0  0.065266      donnie4814           5      1.0  120.0
 
-<br><br>
+df[df.bidder == 'jake7870']['bidderrate'] = 11
 
-@snap[south span-100 text-purple text-05]
-Reuse the *markdown snippet* for any slide in this template within your own @css[text-gold text-bold](PITCHME.md) files.
-@snapend
+/Users/tania/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
 
----
-@title[Tip! Fullscreen]
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+```
 
-![TIP](template/img/tip.png)
-<br>
-For the best viewing experience, press F for fullscreen.
-@css[template-note](We recommend using the *SPACE* key to navigate between slides.)
+@[1-2](You load your wonderful dataset)
+@[3-9](You check it out - oh oh! looks like there's a NaN for jake7870)
+@[11](You decide to tackle the problem the best way you know)
+@[13-17](...until this nasty *Warning* appears!)
 
----?include=template/md/split-screen/PITCHME.md
 
----?include=template/md/sidebar/PITCHME.md
-
----?include=template/md/list-content/PITCHME.md
-
----?include=template/md/boxed-text/PITCHME.md
-
----?include=template/md/image/PITCHME.md
-
----?include=template/md/sidebox/PITCHME.md
-
----?include=template/md/code-presenting/PITCHME.md
-
----?include=template/md/header-footer/PITCHME.md
-
----?include=template/md/quotation/PITCHME.md
-
----?include=template/md/announcement/PITCHME.md
-
----?include=template/md/about/PITCHME.md
-
----?include=template/md/wrap-up/PITCHME.md
-
----?image=template/img/presenter.jpg
-@title[The Template Docs]
-
-@snap[west sign-off]
-### Now it's your turn.
-@snapend
-
-@snap[south docslink text-gold span-100]
-For supporting documentation see the [The Template Docs](https://gitpitch.com/docs/the-template)
-@snapend
