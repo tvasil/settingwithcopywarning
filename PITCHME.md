@@ -1,8 +1,8 @@
 ---?color=linear-gradient(180deg, white 70%, #232354 30%)
 @title[Title Slide]
 
-@snap[west text-20 text-bold text-black]
-#SettingwithCopyWarning @fa[tired]
+@snap[west text-22 text-bold text-black]
+SettingwithCopyWarning @fa[tired]
 @snapend
 
 @snap[south-west byline text-white text-06]
