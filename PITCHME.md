@@ -2,9 +2,8 @@
 @title[Title Slide]
 
 @snap[west text-15 text-bold]
-## @color[black](SettingwithCopyWarning)   @fa[tired]
-<br>
-#### @color[white](*Why you sometimes break Pandas and how to deal with it*)
+### @color[black](SettingwithCopyWarning)   @fa[tired]
+#### @color[white](Why you sometimes break Pandas and how to deal with it)
 @snapend
 
 
