@@ -35,7 +35,8 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 ```
 
 @[1-2](You load your wonderful dataset)
-@[3-9](You check it out - oh oh! looks like there's a NaN for jake7870)
+@[3-9](You check it out)
+@[5](Oh no! looks like there's a NaN for jake7870)
 @[11](You decide to tackle the problem the best way you know)
 @[13-17](...until this nasty *Warning* appears!)
 
