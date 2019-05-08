@@ -1,5 +1,5 @@
----?color=linear-gradient(to right, #c02425, #f0cb35)
-@title[Introduction]
+---?color=solid(#232354)
+@title[SettingwithCopyWarning]
 
 <!--
 Tip! Get started with this template as follows:
@@ -9,11 +9,7 @@ Step 3. Copy slide markdown snippets from template/md directory as needed.
 -->
 
 @snap[west text-25 text-bold text-white]
-GitPitch<br>*The Template*
-@snapend
-
-@snap[south-west byline text-white text-06]
-The Fastest Way From Idea To Presentation.
+SettingwithCopyWarning<br>*hell*
 @snapend
 
 ---
