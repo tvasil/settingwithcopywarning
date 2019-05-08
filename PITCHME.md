@@ -1,7 +1,7 @@
----?color=linear-gradient(180deg, white 70%, #FFD221 30%)
+---?color=linear-gradient(180deg, white 55%, #FFD221 45%)
 @title[Title Slide]
 
-@snap[west text-15 text-bold]
+@snap[west text-bold]
 ### @color[black](SettingwithCopyWarning)   @fa[tired]
 #### @color[white](Why you sometimes break Pandas and how to deal with it)
 @snapend
