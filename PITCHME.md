@@ -55,22 +55,19 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 df[df.bidder == 'jake7870']['bidderrate']
 NaN
+
+df.loc[df.bidder == 'jake7870']['bidderrate'] = 11
+df[df.bidder == 'jake7870']['bidderrate']
+11.0
 ```
 
 @[1](Let's try it again!)
 @[2-5](the friendly warning)
 @[7](Let's check what happened)
 @[8](This is definitely not 11)
-
-+++?color=#C2E1C2
-@title[Deep dive2]
-```python3
-df.loc[df.bidder == 'jake7870']['bidderrate'] = 11
-df[df.bidder == 'jake7870']['bidderrate']
-11.0
-```
-@[1](Let's try the way that Pandas suggests...)
-@[2-3](ok fine, it works)
+@[5](Let's try the way that Pandas suggests...)
+@[10](...by using .loc)
+@[11-12](ok fine, it works)
 
 ---
 
