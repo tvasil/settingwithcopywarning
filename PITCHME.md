@@ -56,7 +56,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 df[df.bidder == 'jake7870']['bidderrate']
 NaN
 
-df.loc[df.bidder == 'jake7870']['bidderrate'] = 11
+df.loc[df.bidder == 'jake7870','bidderrate'] = 11
 df[df.bidder == 'jake7870']['bidderrate']
 11.0
 ```
@@ -72,7 +72,7 @@ df[df.bidder == 'jake7870']['bidderrate']
 ---
 @title[Temporary Victory]
 ### Victory!
-![Victory](https://media.giphy.com/media/a0h7sAqON67nO/giphy.gif)
+![Victory](https://media.giphy.com/media/JlVb5LVZ4y5Uc/giphy.gif)
 
 ---
 @title[Not so fast]
@@ -121,8 +121,10 @@ using .loc[row_indexer,col_indexer] = value instead
 ---
 @title[The problem]
 @css[text-h3 fragment](The actual problem)
-@css[text-h4 fragment](is all about *view* vs *copy* and *"chained operations"*)
+@css[text-h4 fragment](is all about *view* vs *copy* (and *"chained operations"*))
 
 ---
+
+
 
 
