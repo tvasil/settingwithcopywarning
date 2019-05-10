@@ -183,7 +183,20 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 @title[Solution]
 @css[text-h2](Solutions <br>)
 @css[text-h3 fragment](1. Use .loc to change values <br>)
-@fa[thumbs-up fa-4x fa-spin fragment]
+@fa[thumbs-up fa-4x fragment]
+
+---
+@title[Solution2]
+@css[text-h2](Solutions <br>)
+@css[text-h3 fragment](2. Make sure to make a copy when you really mean to! <br>)
+
+```python3
+
+winners = df.loc[df.bid == df.price].copy()
+
+```
+
+@[2](If you're only gonna work on `winners` from now on, make an explicit copy!
 
 
 
