@@ -17,7 +17,7 @@
 ```python3
 import pandas as pd
 df = pd.read_csv('Xbox 3-day auctions.csv')
-df
+df.head()
     auctionid    bid   bidtime          bidder  bidderrate  openbid  price
 0  8213034705   95.0  2.927373        jake7870         NaN     95.0  117.5
 1  8213034705  115.0  2.943484   davidbresler2           1     95.0  117.5
@@ -71,11 +71,48 @@ df[df.bidder == 'jake7870']['bidderrate']
 
 ---
 @title[Temporary Victory]
-#### Victory!
+### Victory!
 ![Victory](https://media.giphy.com/media/a0h7sAqON67nO/giphy.gif)
 
 ---
 @title[Not so fast]
+### not so fast...
 ![Cersei](https://media.giphy.com/media/VIu9jzc36itzy/giphy.gif)
 
 
++++?color=#C2E1C2
+@title[Chained operation]
+
+```python3
+df.head()
+    auctionid    bid   bidtime          bidder  bidderrate  openbid  price
+0  8213034705   95.0  2.927373        jake7870         NaN     95.0  117.5
+1  8213034705  115.0  2.943484   davidbresler2           1     95.0  117.5
+2  8213034705  100.0  2.951285  gladimacowgirl          58     95.0  117.5
+3  8213034705  117.5  2.998947         daysrus          10     95.0  117.5
+4  8213060420    2.0  0.065266      donnie4814           5      1.0  120.0
+
+winners = df.loc[df.bid == df.price]
+
+#### a lot of other important stuff 
+
+winners.loc[304, 'bidder'] = 'mononoke'
+/Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
+core/indexing.py:543: SettingWithCopyWarning: A value is 
+trying to be set on a copy of a slice from a DataFrame.Try 
+using .loc[row_indexer,col_indexer] = value instead
+
+```
+
+@[1-7](Here's your awesome dataset again)
+@[9](Now you just want to take the winners. And you use the .loc notation!)
+@[10](Very important code, lots of stuff, sehr gut)
+@[13](This is definitely not 11)
+@[15](Now you decide this lady's name here is wrong and you want to change it)
+@[16-19](...by using .loc)
+
++++?color=#C2E1C2
+@title[But I used .loc]
+
+### But I used .loc...
+![why](https://media.giphy.com/media/1M9fmo1WAFVK0/giphy.gif)
