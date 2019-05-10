@@ -37,7 +37,7 @@ logo-position : top-left
 # Highlight (Code) Setting
 # Doc: https://gitpitch.com/docs/settings/highlight
 #
-highlight : atom-one-dark
+highlight : vs
 
 #
 # Layout Setting
