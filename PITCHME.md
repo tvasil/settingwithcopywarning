@@ -40,12 +40,8 @@ Try using .loc[row_indexer,col_indexer] = value instead
 @[13-16](...until this nasty *Warning* appears!)
 
 ---
-@title[But]
-# Wait but...
-
----
-@title[this tell you]
-# Wait but..this tell you what to do!
+@title[But this tells you what to do...]
+# Wait but... this actually tells you what to do!
 
 +++?color=#C2E1C2
 @title[Deep dive]
@@ -58,7 +54,7 @@ is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 df[df.bidder == 'jake7870']['bidderrate']
-95.0
+NaN
 ```
 
 @[1](Let's try it again!)
@@ -66,6 +62,8 @@ df[df.bidder == 'jake7870']['bidderrate']
 @[7](Let's check what happened)
 @[8](This is definitely not 11)
 
++++?color=#C2E1C2
+@title[Deep dive2]
 ```python3
 df.loc[df.bidder == 'jake7870']['bidderrate'] = 11
 df[df.bidder == 'jake7870']['bidderrate']
