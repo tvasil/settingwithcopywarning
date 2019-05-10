@@ -121,10 +121,38 @@ using .loc[row_indexer,col_indexer] = value instead
 ---
 @title[The problem]
 @css[text-h3 fragment](The actual problem)
-@css[text-h4 fragment](is all about *view* vs *copy* (and *"chained operations"*))
+@css[text-h4 fragment](is all about *view* vs *copy*)
+@css[text-h5 fragment](and *chained operations*)
 
 ---
+@title[View vs copy]
+#### View vs Copy
+@img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
+
++++
+@title[What happens under the hood]
+#### What happens under the hood
+
+```python3
+# Code you write
+data[data.bidder == 'jake7870']['bidderrate'] = 11
+
+# Code that is executed
+data.__getitem__(data.__getitem__('bidder') == 'jake7870').__setitem__('bidderrate', 11)
+
+# IS THIS A COPY? A VIEW?
+
+```
++++
+@title[But if you use .loc]
+
+```python3
+# Code you write
+data.loc[data.bidder == 'jake7870','bidderrate'] = 11
+
+# Code that is executed
+data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870', 'bidderrate'), 11)
 
 
-
+```
 
