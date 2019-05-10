@@ -121,8 +121,8 @@ using .loc[row_indexer,col_indexer] = value instead
 ---
 @title[The problem]
 @css[text-h3 fragment](The actual problem)
-@css[text-h4 fragment](is all about *view* vs *copy*)
-@css[text-h5 fragment](and *chained operations*)
+@css[text-h3 fragment](is all about *view* vs *copy*)
+@css[text-h3 fragment](and *chained operations*)
 
 ---
 @title[View vs copy]
@@ -165,6 +165,22 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 ```
 @[1-2](.loc notation)
 @[4-6](Only executes a **set** operation)
-@[8]((the only one *guaranteed* to be a view and refer to the original df))
+@[8]((the only one *guaranteed* to be a view and refer to the original dataframe))
 
-+++
++++?color=#C2E1C2
+@title[Locations in memory]
+#### In fact even the locations are different in memory
+```python3
+id(df[df.bidder == 'jake7870']['bidderrate'])
+4638136584
+id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
+112051366544
+```
+---
+@title[Solution]
+@css[text-h2 fragment](Solutions <br>)
+@css[text-h3 fragment](1. Use .loc to change values <br>)
+@img[fragment](https://insituscience.files.wordpress.com/2014/09/duhkid.jpg)
+
+
+
