@@ -131,7 +131,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 @title[What happens under the hood]
-#### What happens under the hood
+#### Chained operations
 ```python3
 # Code you write
 data[data.bidder == 'jake7870']['bidderrate'] = 11
@@ -151,7 +151,7 @@ data.__getitem__(data.__getitem__('bidder') == 'jake7870')
 
 +++?color=#C2E1C2
 @title[But if you use .loc]
-#### And now with .loc notation
+#### and now with .loc notation
 
 ```python3
 # Code you write
@@ -173,14 +173,17 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 ```python3
 id(df[df.bidder == 'jake7870']['bidderrate'])
 4638136584
+
 id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 112051366544
 ```
+@[1-2]
+@[4-6]
 ---
 @title[Solution]
 @css[text-h2 fragment](Solutions <br>)
 @css[text-h3 fragment](1. Use .loc to change values <br>)
-@img[fragment](https://insituscience.files.wordpress.com/2014/09/duhkid.jpg)
+@fa[thumbs-up fa-4x fa-spin fragment]
 
 
 
