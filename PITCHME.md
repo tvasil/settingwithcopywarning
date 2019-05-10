@@ -146,12 +146,12 @@ data.__getitem__(data.__getitem__('bidder') == 'jake7870')
 
 @[1-2](Square bracket notation)
 @[4-6](Actually executes both a **get** and a **set** operation)
-@[6](What is "__getitem__(data.__getitem__('bidder') == 'jake7870')"?)
+@[5](What is __getitem__(data.__getitem__('bidder') == 'jake7870')?)
 @[8](nobody knows)
 
 +++?color=#C2E1C2
 @title[But if you use .loc]
-#### and now with .loc notation
+#### and now with *.loc* notation
 
 ```python3
 # Code you write
@@ -164,8 +164,8 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 # THIS IS GUARANTEED TO BE A VIEW
 ```
 @[1-2 fragment](.loc notation)
-@[4-6](Only executes a **set** operation)
-@[8]((the only one *guaranteed* to be a view and refer to the original dataframe))
+@[4-6 fragment](Only executes a **set** operation)
+@[8 fragment]((the only one *guaranteed* to be a view and refer to the original dataframe))
 
 +++?color=#C2E1C2
 @title[Locations in memory]
