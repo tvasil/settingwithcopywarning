@@ -124,7 +124,7 @@ using .loc[row_indexer,col_indexer] = value instead
 @css[text-h3 fragment](is all about *view* vs *copy*)
 @css[text-h3 fragment](and *chained operations*)
 
----
++++?color=#C2E1C2
 @title[View vs copy]
 #### View vs Copy
 @img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
