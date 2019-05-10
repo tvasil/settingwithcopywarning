@@ -41,7 +41,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 ---
 @title[But this tells you what to do...]
-# Wait but... this actually tells you what to do!
+## Great, this tells me what to do!
 
 +++?color=#C2E1C2
 @title[Deep dive]
@@ -70,4 +70,12 @@ df[df.bidder == 'jake7870']['bidderrate']
 @[11-12](ok fine, it works)
 
 ---
+@title[Temporary Victory]
+#### Victory!
+![Victory](https://media.giphy.com/media/a0h7sAqON67nO/giphy.gif)
+
+---
+@title[Not so fast]
+![Cersei](https://media.giphy.com/media/VIu9jzc36itzy/giphy.gif)
+
 
