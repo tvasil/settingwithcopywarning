@@ -121,7 +121,7 @@ using .loc[row_indexer,col_indexer] = value instead
 ---
 @title[The problem]
 @css[text-h3 fragment](The actual problem)
-@css[text-h4 fragment](*chained operations*)
+@css[text-h4 fragment](is all about *view* vs *copy* and *"chained operations"*)
 
 ---
 
