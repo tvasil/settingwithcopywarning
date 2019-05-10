@@ -94,7 +94,8 @@ df.head()
 
 winners = df.loc[df.bid == df.price]
 
-#### a lot of other important stuff 
+## a lot of other important stuff 
+## (200 lines of code)
 
 winners.loc[304, 'bidder'] = 'mononoke'
 /Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
@@ -106,13 +107,22 @@ using .loc[row_indexer,col_indexer] = value instead
 
 @[1-7](Here's your awesome dataset again)
 @[9](Now you just want to take the winners. And you use the .loc notation!)
-@[10](Very important code, lots of stuff, sehr gut)
-@[13](This is definitely not 11)
-@[15](Now you decide this lady's name here is wrong and you want to change it)
-@[16-19](...by using .loc)
+@[11-12](Very important code, lots of stuff, sehr gut)
+@[14](You try to reset a value you discover is wrong...)
+@[15-18](by using .loc...)
+
 
 +++?color=#C2E1C2
 @title[But I used .loc]
 
 ### But I used .loc...
 ![why](https://media.giphy.com/media/1M9fmo1WAFVK0/giphy.gif)
+
+---
+@title[The problem]
+@css[text-h3 fragment](The actual problem)
+@css[text-h4 fragment](*chained operations*)
+
+---
+
+
