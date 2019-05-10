@@ -14,7 +14,7 @@
 +++?color=#C2E1C2
 @title[Intro to error]
 
-```python3
+```python
 import pandas as pd
 df = pd.read_csv('Xbox 3-day auctions.csv')
 df.head()
@@ -46,7 +46,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 +++?color=#C2E1C2
 @title[Deep dive]
 
-```python3
+```python
 df[df.bidder == 'jake7870']['bidderrate'] = 11
 /Users/tania/anaconda3/lib/python3.6/site-packages/
 ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
@@ -83,7 +83,7 @@ df[df.bidder == 'jake7870']['bidderrate']
 +++?color=#C2E1C2
 @title[Chained operation]
 
-```python3
+```python
 df.head()
     auctionid    bid   bidtime          bidder  bidderrate  openbid  price
 0  8213034705   95.0  2.927373        jake7870         NaN     95.0  117.5
@@ -132,7 +132,8 @@ using .loc[row_indexer,col_indexer] = value instead
 +++?color=#C2E1C2
 @title[What happens under the hood]
 #### Chained operations
-```python3
+
+```python
 # Code you write
 data[data.bidder == 'jake7870']['bidderrate'] = 11
 
@@ -153,7 +154,7 @@ data.__getitem__(data.__getitem__('bidder') == 'jake7870')
 @title[But if you use .loc]
 #### and now with *.loc* notation
 
-```python3
+```python
 # Code you write
 data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 
@@ -170,7 +171,8 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 +++?color=#C2E1C2
 @title[Locations in memory]
 #### In fact even the locations are different in memory
-```python3
+
+```python
 id(df[df.bidder == 'jake7870']['bidderrate'])
 4638136584
 
@@ -190,10 +192,8 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 @css[text-h2](Solutions <br>)
 @css[text-h3 fragment](2. Make sure to make a copy when you really mean to! <br>)
 
-```python3
-
+```python
 winners = df.loc[df.bid == df.price].copy()
-
 ```
 
 @[2](If you're only gonna work on `winners` from now on, make an explicit copy!
