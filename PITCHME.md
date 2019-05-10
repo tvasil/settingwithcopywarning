@@ -131,6 +131,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 @title[What happens under the hood]
+#### What happens under the hood
 ```python3
 # Code you write
 data[data.bidder == 'jake7870']['bidderrate'] = 11
@@ -150,6 +151,7 @@ data.__getitem__(data.__getitem__('bidder') == 'jake7870')
 
 +++?color=#C2E1C2
 @title[But if you use .loc]
+#### And now with .loc notation
 
 ```python3
 # Code you write
@@ -165,3 +167,4 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 @[4-6](Only executes a **set** operation)
 @[8]((the only one *guaranteed* to be a view and refer to the original df))
 
++++
