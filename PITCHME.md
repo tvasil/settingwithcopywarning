@@ -3,6 +3,7 @@
 
 @snap[west text-bold]
 ### @color[black](SettingwithCopyWarning)   @fa[tired]
+
 #### @color[white](Why you sometimes break Pandas and how to deal with it)
 @snapend
 
