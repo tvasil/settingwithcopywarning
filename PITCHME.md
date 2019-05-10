@@ -120,7 +120,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 ---
 @title[The problem]
-@css[text-h3 fragment](The actual problem)
+@css[text-h3](The actual problem)
 @css[text-h3 fragment](is all about *view* vs *copy*)
 @css[text-h3 fragment](and *chained operations*)
 
@@ -163,7 +163,7 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 
 # THIS IS GUARANTEED TO BE A VIEW
 ```
-@[1-2](.loc notation)
+@[1-2 fragment](.loc notation)
 @[4-6](Only executes a **set** operation)
 @[8]((the only one *guaranteed* to be a view and refer to the original dataframe))
 
@@ -181,7 +181,7 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 @[4-6]
 ---
 @title[Solution]
-@css[text-h2 fragment](Solutions <br>)
+@css[text-h2](Solutions <br>)
 @css[text-h3 fragment](1. Use .loc to change values <br>)
 @fa[thumbs-up fa-4x fa-spin fragment]
 
