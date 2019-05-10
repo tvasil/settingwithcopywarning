@@ -129,10 +129,8 @@ using .loc[row_indexer,col_indexer] = value instead
 #### View vs Copy
 @img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
 
-+++
++++?color=#C2E1C2
 @title[What happens under the hood]
-#### What happens under the hood
-
 ```python3
 # Code you write
 data[data.bidder == 'jake7870']['bidderrate'] = 11
@@ -143,7 +141,13 @@ data.__getitem__(data.__getitem__('bidder') == 'jake7870').__setitem__('bidderra
 # IS THIS A COPY? A VIEW?
 
 ```
-+++
+
+@[1-2](Square bracket notation)
+@[4-5](Actually executes both a **get** and a **set** operation)
+@[4-5](What is "__getitem__(data.__getitem__('bidder') == 'jake7870')"?)
+@[7](nobody knows)
+
++++?color=#C2E1C2
 @title[But if you use .loc]
 
 ```python3
@@ -153,6 +157,9 @@ data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 # Code that is executed
 data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870', 'bidderrate'), 11)
 
-
+# THIS IS GUARANTEED TO BE A VIEW
 ```
+@[1-2](.loc notation)
+@[4-5](Only executes a **set** operation)
+@[7]((the only one *guaranteed* to be a view and refer to the original df))
 
