@@ -136,16 +136,17 @@ using .loc[row_indexer,col_indexer] = value instead
 data[data.bidder == 'jake7870']['bidderrate'] = 11
 
 # Code that is executed
-data.__getitem__(data.__getitem__('bidder') == 'jake7870').__setitem__('bidderrate', 11)
+data.__getitem__(data.__getitem__('bidder') == 'jake7870')
+.__setitem__('bidderrate', 11)
 
 # IS THIS A COPY? A VIEW?
 
 ```
 
 @[1-2](Square bracket notation)
-@[4-5](Actually executes both a **get** and a **set** operation)
-@[4-5](What is "__getitem__(data.__getitem__('bidder') == 'jake7870')"?)
-@[7](nobody knows)
+@[4-6](Actually executes both a **get** and a **set** operation)
+@[6](What is "__getitem__(data.__getitem__('bidder') == 'jake7870')"?)
+@[8](nobody knows)
 
 +++?color=#C2E1C2
 @title[But if you use .loc]
@@ -155,11 +156,12 @@ data.__getitem__(data.__getitem__('bidder') == 'jake7870').__setitem__('bidderra
 data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 
 # Code that is executed
-data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870', 'bidderrate'), 11)
+data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
+'bidderrate'), 11)
 
 # THIS IS GUARANTEED TO BE A VIEW
 ```
 @[1-2](.loc notation)
-@[4-5](Only executes a **set** operation)
-@[7]((the only one *guaranteed* to be a view and refer to the original df))
+@[4-6](Only executes a **set** operation)
+@[8]((the only one *guaranteed* to be a view and refer to the original df))
 
