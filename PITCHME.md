@@ -81,8 +81,8 @@ df[df.bidder == 'jake7870']['bidderrate']
 
 
 +++?color=#C2E1C2
-@title[Chained operation]
-@snap[north text-bold] 
+@title[Chained assignment]
+@snap[north] 
 #### A more realistic example
 
 ```python
@@ -100,18 +100,21 @@ winners = df.loc[df.bid == df.price]
 ## (200 lines of code)
 
 winners.loc[304, 'bidder'] = 'mononoke'
+```
+
+@[1-7](Here's your awesome dataset again)
+@[9](Now you just want to take the winners. And you use the .loc notation!)
+@[11-12](Very important code, lots of stuff, sehr gut)
+@[14](You try to reset a value you discover is wrong by using *.loc*)
+
+```python3
 /Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
 core/indexing.py:543: SettingWithCopyWarning: A value is 
 trying to be set on a copy of a slice from a DataFrame.Try 
 using .loc[row_indexer,col_indexer] = value instead
 
 ```
-
-@[1-7](Here's your awesome dataset again)
-@[9](Now you just want to take the winners. And you use the .loc notation!)
-@[11-12](Very important code, lots of stuff, sehr gut)
-@[14](You try to reset a value you discover is wrong...)
-@[15-18](by using .loc...)
+@[1-4](but you get the error again!)
 
 
 +++?color=#C2E1C2
@@ -124,7 +127,7 @@ using .loc[row_indexer,col_indexer] = value instead
 @title[The problem]
 @css[text-h3](The actual problem)
 @css[text-h3 fragment](is all about *view* vs *copy*)
-@css[text-h3 fragment](and *chained operations*)
+@css[text-h3 fragment](and *chained assignment*)
 
 +++?color=#C2E1C2
 @title[View vs copy]
@@ -133,7 +136,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 @title[What happens under the hood]
-#### Chained operations
+#### Chained assignment
 
 ```python
 # Code you write
@@ -185,12 +188,14 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 @[4-6]
 ---
 @title[Solution]
+@snap[north] 
 @css[text-h2](Solutions <br>)
 @css[text-h3 fragment](1. Use .loc to change values <br>)
 @fa[thumbs-up fa-4x fragment]
 
 ---
 @title[Solution2]
+@snap[north] 
 @css[text-h2](Solutions <br>)
 @css[text-h3 fragment](2. Make sure to make a copy when you really mean to! <br>)
 
@@ -198,7 +203,36 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 winners = df.loc[df.bid == df.price].copy()
 ```
 
-@[2](If you're only gonna work on `winners` from now on, make an explicit copy!
+@[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
+
+---
+@title[Solution3]
+@snap[north] 
+@css[text-h2](Solutions <br>)
+@css[text-h3 fragment](3. If you want to change the origal df, do that)
+
+```python
+df.loc[data.loc[data.bidder == 'jake7870','bidderrate'] = 11
+```
+@[1](Again, change by using *.loc*)
+
+---
+@title[Suppress warning]
+@snap[north] 
+@css[text-h2](Should I suppress the warning?)
+@css[text-h3 fragment](My suggestion is NO)
+
+```python
+pd.set_option('mode.chained_assignment', None)
+
+pd.set_option('mode.chained_assignment', 'raise')
+```
+@[1](If you're really know what you're doing, you can suppress the warning)
+@[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
+
+---
+@title[Thank you]
+## Thank you!
 
 
 
