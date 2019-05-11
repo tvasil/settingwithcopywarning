@@ -115,7 +115,6 @@ winners.loc[304, 'bidder'] = 'mononoke'
 #### A more realistic example
 @snapend
 
-@snap[midpoint span-90 fragment]
 ```python3
 /Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
 core/indexing.py:543: SettingWithCopyWarning: A value is 
@@ -124,7 +123,6 @@ using .loc[row_indexer,col_indexer] = value instead
 
 ```
 @[1-4](but you get the warning again!)
-@snapend
 
 
 +++?color=#C2E1C2
@@ -203,6 +201,7 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 @css[text-h2](Solutions <br>)
 @snapend
 @css[text-h3 fragment](1. Use *.loc* to replace values <br>)
+
 @fa[thumbs-up fa-4x fragment]
 
 ---
@@ -210,20 +209,18 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 @snap[north] 
 @css[text-h2](Solutions <br>)
 @snapend
-@css[text-h3 fragment](2. Make sure to make a copy when you really mean to! <br>)
+@css[text-h3](2. Make sure to make a copy when you really mean to! <br>)
 
-@snap[midpoint fragment]
 ```python
 winners = df.loc[df.bid == df.price].copy()
 ```
 @[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
-@snapend
 
 ---
 @title[Solution3]
 @snap[north] 
 @css[text-h2](Solutions <br>)
-@css[text-h3 fragment](3. If you want to change the origal df, do that)
+@css[text-h3](3. If you want to change the origal dataframe, do that directly)
 
 ```python
 df.loc[data.loc[data.bidder == 'jake7870','bidderrate'] = 11
@@ -234,9 +231,8 @@ df.loc[data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 @title[Suppress warning]
 @snap[north] 
 @css[text-h2](Should I suppress the warning?)
-@css[text-h3 fragment](My suggestion is NO)
+@css[text-h3](My suggestion is NO)
 
-@snap[midpoint fragment]
 ```python
 pd.set_option('mode.chained_assignment', None)
 
@@ -244,7 +240,6 @@ pd.set_option('mode.chained_assignment', 'raise')
 ```
 @[1](If you're really know what you're doing, you can suppress the warning)
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
-@snapend
 
 ---
 @title[Thank you]
