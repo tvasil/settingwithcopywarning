@@ -82,6 +82,8 @@ df[df.bidder == 'jake7870']['bidderrate']
 
 +++?color=#C2E1C2
 @title[Chained operation]
+@snap[north text-bold] 
+#### A more realistic example
 
 ```python
 df.head()
@@ -164,9 +166,9 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 
 # THIS IS GUARANTEED TO BE A VIEW
 ```
-@[1-2 fragment](.loc notation)
-@[4-6 fragment](Only executes a **set** operation)
-@[8 fragment]((the only one *guaranteed* to be a view and refer to the original dataframe))
+@[1-2](.loc notation)
+@[4-6](Only executes a **set** operation)
+@[8]((the only one *guaranteed* to be a view and refer to the original dataframe))
 
 +++?color=#C2E1C2
 @title[Locations in memory]
