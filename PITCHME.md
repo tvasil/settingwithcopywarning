@@ -84,6 +84,7 @@ df[df.bidder == 'jake7870']['bidderrate']
 @title[Chained assignment]
 @snap[north] 
 #### A more realistic example
+@snap[end]
 
 ```python
 df.head()
@@ -112,7 +113,9 @@ winners.loc[304, 'bidder'] = 'mononoke'
 @title[Chained assignment2]
 @snap[north] 
 #### A more realistic example
+@snapend
 
+@snap[midpoint span-90 fragment]
 ```python3
 /Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
 core/indexing.py:543: SettingWithCopyWarning: A value is 
@@ -121,6 +124,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 ```
 @[1-4](but you get the warning again!)
+@snapend
 
 
 +++?color=#C2E1C2
@@ -175,7 +179,7 @@ data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
 
 # THIS IS GUARANTEED TO BE A VIEW
 ```
-@[1-2](.loc notation)
+@[1-2](*.loc* notation)
 @[4-6](Only executes a **set** operation)
 @[8]((the only one *guaranteed* to be a view and refer to the original dataframe))
 
@@ -190,26 +194,30 @@ id(df[df.bidder == 'jake7870']['bidderrate'])
 id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 112051366544
 ```
-@[1-2]
-@[4-6]
+@[1-2](Location of intermediate object)
+@[4-6](Location of the view)
+
 ---
 @title[Solution]
 @snap[north] 
 @css[text-h2](Solutions <br>)
-@css[text-h3 fragment](1. Use .loc to change values <br>)
+@snapend
+@css[text-h3 fragment](1. Use *.loc* to replace values <br>)
 @fa[thumbs-up fa-4x fragment]
 
 ---
 @title[Solution2]
 @snap[north] 
 @css[text-h2](Solutions <br>)
+@snapend
 @css[text-h3 fragment](2. Make sure to make a copy when you really mean to! <br>)
 
+@snap[midpoint fragment]
 ```python
 winners = df.loc[df.bid == df.price].copy()
 ```
-
 @[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
+@snapend
 
 ---
 @title[Solution3]
@@ -228,6 +236,7 @@ df.loc[data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 @css[text-h2](Should I suppress the warning?)
 @css[text-h3 fragment](My suggestion is NO)
 
+@snap[midpoint fragment]
 ```python
 pd.set_option('mode.chained_assignment', None)
 
@@ -235,6 +244,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 ```
 @[1](If you're really know what you're doing, you can suppress the warning)
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
+@snapend
 
 ---
 @title[Thank you]
