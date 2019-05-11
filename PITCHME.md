@@ -107,6 +107,12 @@ winners.loc[304, 'bidder'] = 'mononoke'
 @[11-12](Very important code, lots of stuff, sehr gut)
 @[14](You try to reset a value you discover is wrong by using *.loc*)
 
+
++++?color=#C2E1C2
+@title[Chained assignment2]
+@snap[north] 
+#### A more realistic example
+
 ```python3
 /Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
 core/indexing.py:543: SettingWithCopyWarning: A value is 
@@ -114,7 +120,7 @@ trying to be set on a copy of a slice from a DataFrame.Try
 using .loc[row_indexer,col_indexer] = value instead
 
 ```
-@[1-4](but you get the error again!)
+@[1-4](but you get the warning again!)
 
 
 +++?color=#C2E1C2
