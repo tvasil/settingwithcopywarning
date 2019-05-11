@@ -198,7 +198,7 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 ---
 @title[Solution]
 @snap[north] 
-@css[text-h2](Solutions <br>)
+@css[text-h2 text-bold](Solutions <br>)
 @snapend
 @css[text-h3 fragment](1. Use *.loc* to replace values <br>)
 
@@ -207,7 +207,7 @@ id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 ---
 @title[Solution2]
 @snap[north] 
-@css[text-h2](Solutions <br>)
+@css[text-h2 text-bold](Solutions <br>)
 @snapend
 @css[text-h3](2. Make sure to make a copy when you really mean to! <br>)
 
@@ -219,7 +219,7 @@ winners = df.loc[df.bid == df.price].copy()
 ---
 @title[Solution3]
 @snap[north] 
-@css[text-h2](Solutions <br>)
+@css[text-h2 text-bold](Solutions <br>)
 @css[text-h3](3. If you want to change the origal dataframe, do that directly)
 
 ```python
@@ -230,7 +230,7 @@ df.loc[data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 ---
 @title[Suppress warning]
 @snap[north] 
-@css[text-h2](Should I suppress the warning?)
+@css[text-h2 text-bold](Should I suppress the warning? <br>)
 @css[text-h3](My suggestion is NO)
 
 ```python
