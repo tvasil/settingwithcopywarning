@@ -148,10 +148,10 @@ using .loc[row_indexer,col_indexer] = value instead
 
 ```python
 # Code you write
-data[data.bidder == 'jake7870']['bidderrate'] = 11
+df[df.bidder == 'jake7870']['bidderrate'] = 11
 
 # Code that is executed
-data.__getitem__(data.__getitem__('bidder') == 'jake7870')
+df.__getitem__(df.__getitem__('bidder') == 'jake7870')
 .__setitem__('bidderrate', 11)
 
 # IS THIS A COPY? A VIEW?
@@ -169,10 +169,10 @@ data.__getitem__(data.__getitem__('bidder') == 'jake7870')
 
 ```python
 # Code you write
-data.loc[data.bidder == 'jake7870','bidderrate'] = 11
+df.loc[df.bidder == 'jake7870','bidderrate'] = 11
 
 # Code that is executed
-data.loc.__setitem__((data.__getitem__('bidder') == 'jake7870',
+df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 'bidderrate'), 11)
 
 # THIS IS GUARANTEED TO BE A VIEW
@@ -223,7 +223,7 @@ winners = df.loc[df.bid == df.price].copy()
 @css[text-h3](3. If you want to change the origal dataframe, do that directly)
 
 ```python
-df.loc[data.loc[data.bidder == 'jake7870','bidderrate'] = 11
+data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 ```
 @[1](Again, change by using *.loc*)
 
