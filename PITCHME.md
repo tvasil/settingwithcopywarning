@@ -97,8 +97,8 @@ df.head()
 
 winners = df.loc[df.bid == df.price]
 
-## a lot of other important stuff 
-## (200 lines of code)
+##a lot of other important stuff 
+##(200 lines of code)
 
 winners.loc[304, 'bidder'] = 'mononoke'
 ```
