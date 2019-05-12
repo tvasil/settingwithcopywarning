@@ -207,6 +207,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 ```
 @[1-2](Location of intermediate object)
 @[4-6](Location of the view into the original df)
+@[1-6]
 
 ---
 @title[Solution]
