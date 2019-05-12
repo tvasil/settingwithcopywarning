@@ -275,7 +275,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @fa[github-square pad-right-icon]@css[git-handle](tvasil/settingwithcopywarning)
 </a><br>
 <a href="https://slackin.pyladies.com">
-@fa[slack-hash pad-right-icon]@css[pyladies-slack](PyLadies Slack: tania)
+@fa[slack pad-right-icon]@css[pyladies-slack](PyLadies Slack: tania)
 </a><br>
 @snapend
 
