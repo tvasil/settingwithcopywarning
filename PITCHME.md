@@ -214,6 +214,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 
 ---
 @title[Solution2]
+
 @snap[north] 
 @css[text-h2 text-bold](Solutions <br>)
 @snapend
@@ -226,8 +227,10 @@ winners = df.loc[df.bid == df.price].copy()
 
 ---
 @title[Solution3]
+
 @snap[north] 
 @css[text-h2 text-bold](Solutions <br>)
+@snapend
 @css[text-h3](3. If you want to change the origal dataframe, do that directly)
 
 ```python
@@ -237,6 +240,7 @@ data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 
 ---
 @title[Suppress warning]
+
 @snap[north] 
 @css[text-h2 text-bold](Should I suppress the warning? <br>)
 @css[text-h3](My suggestion is NO)
@@ -253,8 +257,8 @@ pd.set_option('mode.chained_assignment', 'raise')
 @title[Thank you]
 ## Thank you!
 
-@snap[west span-10]
-![github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) /tvasil
+@snap[west span-5]
+![github](https://banner2.kisspng.com/20180326/gxq/kisspng-github-computer-icons-icon-design-github-5ab8a31e334e73.4114704215220498222102.jpg) /tvasil
 ![twitter](https://image.flaticon.com/icons/png/512/23/23681.png) twitter.com/tvasi
 ![pyladies](https://cdn-images-1.medium.com/max/1600/1*Pc8QzOC5RNvDaXNGzzRWWg.png) @tania
 @snapend
