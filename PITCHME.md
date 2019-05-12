@@ -212,9 +212,9 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @title[Solution]
 
 @snap[north] 
-### Solutions
+## Solutions
 @snapend
-## 1. Use *.loc* to replace values <br>
+### 1. Use *.loc* to replace values <br>
 
 @fa[thumbs-up fa-4x fragment]
 
@@ -222,9 +222,9 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @title[Solution2]
 
 @snap[north] 
-@css[text-h2 text-bold](Solutions <br>)
+## Solutions
 @snapend
-@css[text-h3](2. Make sure to make a copy when you really mean to! <br>)
+### 2. Make sure to create a copy when you really mean to!
 
 ```python
 winners = df.loc[df.bid == df.price].copy()
@@ -235,9 +235,9 @@ winners = df.loc[df.bid == df.price].copy()
 @title[Solution3]
 
 @snap[north] 
-@css[text-h2 text-bold](Solutions <br>)
+## Solutions
 @snapend
-@css[text-h3](3. If you want to change the origal dataframe, do that directly)
+### 3. If you want to change the origal dataframe, do that directly
 
 ```python
 data.loc[data.bidder == 'jake7870','bidderrate'] = 11
@@ -248,8 +248,9 @@ data.loc[data.bidder == 'jake7870','bidderrate'] = 11
 @title[Suppress warning]
 
 @snap[north] 
-@css[text-h2 text-bold](Should I suppress the warning? <br>)
-@css[text-h3](My suggestion is NO)
+### Extra: should I suppress the warning?
+@snapend
+#### My suggestion is NO
 
 ```python
 pd.set_option('mode.chained_assignment', None)
