@@ -254,13 +254,21 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
 ---?color=#9FEAA7
-@title[Thank you]
-## Thank you!
 
-@snap[west span-5]
-![github](https://banner2.kisspng.com/20180326/gxq/kisspng-github-computer-icons-icon-design-github-5ab8a31e334e73.4114704215220498222102.jpg) /tvasil
-![twitter](https://image.flaticon.com/icons/png/512/23/23681.png) twitter.com/tvasi
-![pyladies](https://cdn-images-1.medium.com/max/1600/1*Pc8QzOC5RNvDaXNGzzRWWg.png) @tania
+@snap[west contact-links]
+@css[contact-name](Tania Vasilikioti)<br>
+<a href="https://twitter.com/tvasi">
+@fa[twitter-square pad-right-icon]@css[twitter-handle](@tvasi)
+</a><br>
+<a href="https://github.com/tvasil/settingwithcopywarning">
+@fa[github-square pad-right-icon]@css[git-handle](tvasil/settingwithcopywarning)
+</a><br>
+@fa[slack pad-right-icon]@css[PyLadies Slack](@tania)
+</a>
+@snapend
+
+@snap[east span-50]
+![](template/img/contact-1.png)
 @snapend
 
 
