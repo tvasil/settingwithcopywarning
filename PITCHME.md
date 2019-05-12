@@ -134,10 +134,9 @@ using .loc[row_indexer,col_indexer] = value instead
 @img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
 
 +++?color=#C2E1C2
-@title(What happens in the original example)
 
 @snap[north span-90] 
-#### So what happens when we user *[]* ?
+#### So what happens when we use *[]* ?
 @snapend
 
 ```python
