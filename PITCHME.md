@@ -74,7 +74,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 @title[Chained assignment]
-@snap[north span-90] 
+@snap[north span-95] 
 #### A more realistic example
 @snapend
 
