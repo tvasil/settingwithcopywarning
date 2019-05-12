@@ -18,7 +18,7 @@
 @snapend
 
 ```python
-import pandas as pd
+>>> import pandas as pd
 >>> df = pd.read_csv('Xbox 3-day auctions.csv')
 >>> df.head()
     auctionid    bid   bidtime          bidder  bidderrate  openbid  price
@@ -36,19 +36,22 @@ is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 ```
 
-@[1-2](You load your wonderful dataset)
+@[1-2](You load your dataset)
 @[3-9](You check it out)
 @[5](Oh no! looks like there's a NaN for jake7870)
 @[11](You decide to tackle the problem the best way you know)
 @[13-16](Until this warning appears)
-@[16](BUt wait! It tells us what to do!)
+@[16](But wait! It tells us what to do!)
 
 +++?color=#C2E1C2
 @title[Let's fix it]
+@snap[north span-90] 
+#### Let's fix it
+@snapend
 
 ```python
 >>> df.loc[df.bidder == 'jake7870','bidderrate'] = 11
-# Notice the lack of warnings! :D
+# Notice the surprising lack of warnings! :D
 
 >>> df[df.bidder == 'jake7870']['bidderrate']
 11.0
@@ -76,27 +79,24 @@ Try using .loc[row_indexer,col_indexer] = value instead
 @snapend
 
 ```python
-df.head()
-    auctionid    bid   bidtime          bidder  bidderrate  openbid  price
-0  8213034705   95.0  2.927373        jake7870         NaN     95.0  117.5
-1  8213034705  115.0  2.943484   davidbresler2           1     95.0  117.5
-2  8213034705  100.0  2.951285  gladimacowgirl          58     95.0  117.5
-3  8213034705  117.5  2.998947         daysrus          10     95.0  117.5
-4  8213060420    2.0  0.065266      donnie4814           5      1.0  120.0
-
-winners = df.loc[df.bid == df.price]
-
+>>> winners = df.loc[df.bid == df.price]
 ##a lot of other important stuff 
 ##(200 lines of code)
+>>> winners.tail()
+      auctionid     bid   bidtime         bidder  bidderrate  openbid   price
+514  8215571039  150.00  2.997442     lambonius1           0    50.00  150.00
+515  8215571039  150.00  2.998437   analogkidd99           0    50.00  150.00
+531  8215582227  152.50  2.999664  ultimatum_man           2    60.00  152.50
+542  8215605488   61.00  2.586493     pgauctions          16     0.99   61.00
+555  8215610555   35.09  2.973264       biquÃni4         114     5.00   35.09
 
-winners.loc[304, 'bidder'] = 'mononoke'
+>>> winners.loc[555, 'bidder'] = 'biquini4'
 ```
 
-@[1-7](Here's your awesome dataset again)
-@[9](Now you just want to take the winners. And you use the .loc notation!)
-@[11-12](Very important code, lots of stuff, sehr gut)
-@[14](You try to reset a value you discover is wrong by using *.loc*)
-
+@[1](Let's say now you want to only look at the auction winners)
+@[2-3](You create a new dataframe and forget about the old one, while working on other code)
+@[4-10](Suddenly you check out the data again and see there was some encoding error)
+@[10](This really bothers you right now, so you just go ahead and replace it with *.loc*)
 
 +++?color=#C2E1C2
 @title[Chained assignment2]
