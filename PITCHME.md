@@ -194,8 +194,6 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @[8](the only slicing *guaranteed* to return a view and to refer to the original dataframe))
 
 +++?color=#C2E1C2
-
-+++?color=#C2E1C2
 @title[Locations in memory]
 
 #### If you don't trust me, check the locations in memory
