@@ -96,7 +96,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 @[1](Let's say now you want to only look at the auction winners)
 @[2-3](You create a new dataframe and forget about the old one, while working on other code)
 @[4-10](Suddenly you check out the data again and see there was some encoding error)
-@[10](This really bothers you right now, so you just go ahead and replace it with *.loc*)
+@[10-12](This really bothers you right now, so you just go ahead and replace it with *.loc*)
 
 +++?color=#C2E1C2
 @title[Chained assignment2]
