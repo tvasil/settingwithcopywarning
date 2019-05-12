@@ -262,7 +262,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
 +++
-![github-discussion](/assets/img/PandasWarningIssue.gif)
+![github-discussion](/assets/img/github_issue.png)
 
 ---?color=#FFD221
 
