@@ -187,7 +187,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 ```
 @[1-2](*.loc* notation)
 @[4-6](Only executes a **set** operation)
-@[8]((the only one *guaranteed* to be a view and refer to the original dataframe))
+@[8](the only slicing *guaranteed* to return a view and to refer to the original dataframe))
 
 +++?color=#C2E1C2
 @title[Locations in memory]
