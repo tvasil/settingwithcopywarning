@@ -241,7 +241,7 @@ winners = df.loc[df.bid == df.price].copy()
 ### 3. If you want to change the origal dataframe, do that directly
 
 ```python
-data.loc[data.bidder == 'jake7870','bidderrate'] = 11
+df.loc[df.bidder == 'jake7870','bidderrate'] = 11
 ```
 @[1](Again, change by using *.loc*)
 
