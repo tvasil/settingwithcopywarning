@@ -263,7 +263,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 <a href="https://github.com/tvasil/settingwithcopywarning">
 @fa[github-square pad-right-icon]@css[git-handle](tvasil/settingwithcopywarning)
 </a><br>
-@fa[slack pad-right-icon]@css[PyLadies Slack](@tania)
+@fa[slack pad-right-icon]@css[PyLadies Slack](PyLadies Slack: @tania)
 </a>
 @snapend
 
