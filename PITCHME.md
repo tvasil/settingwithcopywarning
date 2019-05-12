@@ -250,7 +250,7 @@ df.loc[555,'bidder'] = 'bikini4'
 
 @snapend
 +++
-@title[Suppress warning]
+@title[Should I suppress warnings?]
 
 @snap[north span-90] 
 ### Extra: should I suppress the warning?
@@ -267,11 +267,18 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
 +++
+@title[The conversation on GitHub]
+
+@snap[north span-90] 
+### The conversation on GitHub is fiery about this topic
+@snapend
+
 @snap[midpoint span-90]
 ![github-discussion](assets/img/github_issue.jpeg)
 @snapend
 
 ---?color=#FFD221
+@title[Stay in touch!]
 
 @snap[west contact-links]
 @css[thank-you](Thank you!)<br>
