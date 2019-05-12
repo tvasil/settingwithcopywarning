@@ -194,6 +194,23 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @[8](the only slicing *guaranteed* to return a view and to refer to the original dataframe))
 
 +++?color=#C2E1C2
+@title[So what about our original example?]
+### So what happens in our original example?
+
+```python
+winners = df.loc[df.bid == df.price]
+winners.loc[555, 'bidder'] = 'bikini4'
+
+# This is actually the same as:
+
+df.loc[df.big == df.price].loc[555,'bidder'] = 'bikini4'
+```
+
+@[1-2](Our original creation of winners is a hidden chained assignenment]
+@[4-6](Which is actually equivalent to this, two chained .loc operations)
+
++++?color=#C2E1C2
+
 @title[Locations in memory]
 
 #### If you don't trust me, check the locations in memory
@@ -227,13 +244,11 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @snapend
 #### 2. Make sure to create a copy when you really mean to!
 
-@snap[midpoint span-90]
 ```python
 winners = df.loc[df.bid == df.price].copy()
 ```
 @[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
 
-@snapend
 +++
 @title[Solution3]
 
@@ -242,13 +257,11 @@ winners = df.loc[df.bid == df.price].copy()
 @snapend
 #### 3. If you want to change the original dataframe, do that directly
 
-@snap[midpoint span-90]
 ```python
 df.loc[555,'bidder'] = 'bikini4'
 ```
 @[1](Again, change by using *.loc*)
 
-@snapend
 +++
 @title[Should I suppress warnings?]
 
