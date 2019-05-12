@@ -61,12 +61,12 @@ Try using .loc[row_indexer,col_indexer] = value instead
 @[2](Now this gives us no warning)
 @[4-5](Ok fine, it works as expected)
 
----
++++?color=white
 @title[Temporary Victory]
 ### Victory!
 ![Victory](https://media.giphy.com/media/JlVb5LVZ4y5Uc/giphy.gif)
 
----
++++?color=white
 @title[Not so fast]
 ### not so fast...
 ![Cersei](https://media.giphy.com/media/VIu9jzc36itzy/giphy.gif)
@@ -122,7 +122,7 @@ using .loc[row_indexer,col_indexer] = value instead
 ![why](https://media.giphy.com/media/1M9fmo1WAFVK0/giphy.gif)
 
 ---
-@title[The problem]
+@title[The actual problem]
 @css[text-h3](The actual problem)
 @css[text-h3 fragment](is all about *view* vs *copy*)
 @css[text-h3 fragment](and *chained assignment*)
@@ -219,7 +219,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 
 @fa[thumbs-up fa-4x fragment]
 
----
++++
 @title[Solution2]
 
 @snap[north] 
@@ -232,7 +232,7 @@ winners = df.loc[df.bid == df.price].copy()
 ```
 @[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
 
----
++++
 @title[Solution3]
 
 @snap[north] 
@@ -245,7 +245,7 @@ df.loc[555,'bidder'] = 'bikini4'
 ```
 @[1](Again, change by using *.loc*)
 
----
++++
 @title[Suppress warning]
 
 @snap[north span-90] 
