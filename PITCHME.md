@@ -128,13 +128,15 @@ using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 @title[View vs copy]
+
 #### View vs Copy
 @img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
 
 +++?color=#C2E1C2
 @title(What happens in the original example)
+
 @snap[north span-90] 
-#### So what happened with *[]*?
+#### So what happens when we user *[]* ?
 @snapend
 
 ```python
@@ -148,11 +150,12 @@ Try using .loc[row_indexer,col_indexer] = value instead
 >>> df[df.bidder == 'jake7870']['bidderrate']
 NaN
 ```
-@[1-6](While you think you're modifying the original df...
-@[8-9](Only an intermediary object is actualy being modified)
+@[1-6](While we thought we're modifying the original dataframe...)
+@[8-9](Only an intermediary object is actually modified)
 
 +++?color=#C2E1C2
 @title[What happens under the hood]
+
 #### Chained assignment
 
 ```python
@@ -168,11 +171,12 @@ df.__getitem__(df.__getitem__('bidder') == 'jake7870')
 
 @[1-2](Square bracket notation)
 @[4-6](Actually executes both a **get** and a **set** operation)
-@[5](What is `__getitem__(data.__getitem__('bidder') == 'jake7870'`)?)
+@[5](What is this object?)
 @[8](nobody knows)
 
 +++?color=#C2E1C2
 @title[But if you use .loc]
+
 #### and now with *.loc* notation
 
 ```python
@@ -191,6 +195,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 
 +++?color=#C2E1C2
 @title[Locations in memory]
+
 #### If you don't trust me, check the locations in memory
 
 ```python
@@ -201,14 +206,15 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 112051366544
 ```
 @[1-2](Location of intermediate object)
-@[4-6](Location of the view)
+@[4-6](Location of the view into the original df)
 
 ---
 @title[Solution]
+
 @snap[north] 
-@css[text-h2 text-bold](Solutions <br>)
+### Solutions
 @snapend
-@css[text-h3 fragment](1. Use *.loc* to replace values <br>)
+## 1. Use *.loc* to replace values <br>
 
 @fa[thumbs-up fa-4x fragment]
 
@@ -256,7 +262,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 ---?color=#9FEAA7
 
 @snap[west contact-links]
-@css[contact-name](Tania Vasilikioti)<br>
+@css[thank-you](Thank you!)<br>
 <a href="https://twitter.com/tvasi">
 @fa[twitter-square pad-right-icon]@css[twitter-handle](@tvasi)
 </a><br>
@@ -264,7 +270,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @fa[github-square pad-right-icon]@css[git-handle](tvasil/settingwithcopywarning)
 </a><br>
 @fa[slack pad-right-icon]@css[PyLadies Slack](PyLadies Slack: @tania)
-</a>
+</a><br>
 @snapend
 
 @snap[east span-50]
