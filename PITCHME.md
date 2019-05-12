@@ -132,6 +132,26 @@ using .loc[row_indexer,col_indexer] = value instead
 @img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
 
 +++?color=#C2E1C2
+@title(What happens in the original example)
+@snap[north span-90] 
+#### So what happened with *[]*?
+@snapend
+
+```python
+>>> df[df.bidder == 'jake7870']['bidderrate'] = 11
+
+/Users/tania/anaconda3/lib/python3.6/site-packages/
+ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
+is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+>>> df[df.bidder == 'jake7870']['bidderrate']
+NaN
+```
+@[1-6](While you think you're modifying the original df...
+@[8-9](Only an intermediary object is actualy being modified)
+
++++?color=#C2E1C2
 @title[What happens under the hood]
 #### Chained assignment
 
@@ -144,12 +164,11 @@ df.__getitem__(df.__getitem__('bidder') == 'jake7870')
 .__setitem__('bidderrate', 11)
 
 # IS THIS A COPY? A VIEW?
-
 ```
 
 @[1-2](Square bracket notation)
 @[4-6](Actually executes both a **get** and a **set** operation)
-@[5](What is __getitem__(data.__getitem__('bidder') == 'jake7870')?)
+@[5](What is `__getitem__(data.__getitem__('bidder') == 'jake7870'`)?)
 @[8](nobody knows)
 
 +++?color=#C2E1C2
@@ -172,13 +191,13 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 
 +++?color=#C2E1C2
 @title[Locations in memory]
-#### In fact even the locations are different in memory
+#### If you don't trust me, check the locations in memory
 
 ```python
-id(df[df.bidder == 'jake7870']['bidderrate'])
+>>> id(df[df.bidder == 'jake7870']['bidderrate'])
 4638136584
 
-id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
+>>> id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
 112051366544
 ```
 @[1-2](Location of intermediate object)
