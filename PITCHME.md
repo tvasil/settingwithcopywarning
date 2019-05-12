@@ -227,11 +227,13 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @snapend
 #### 2. Make sure to create a copy when you really mean to!
 
+@snap[midpoint span-90]
 ```python
 winners = df.loc[df.bid == df.price].copy()
 ```
 @[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
 
+@snapend
 +++
 @title[Solution3]
 
@@ -240,11 +242,13 @@ winners = df.loc[df.bid == df.price].copy()
 @snapend
 #### 3. If you want to change the original dataframe, do that directly
 
+@snap[midpoint span-90]
 ```python
 df.loc[555,'bidder'] = 'bikini4'
 ```
 @[1](Again, change by using *.loc*)
 
+@snapend
 +++
 @title[Suppress warning]
 
@@ -252,6 +256,7 @@ df.loc[555,'bidder'] = 'bikini4'
 ### Extra: should I suppress the warning?
 @snapend
 #### My suggestion is NO
+
 
 ```python
 pd.set_option('mode.chained_assignment', None)
