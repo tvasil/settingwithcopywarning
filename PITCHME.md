@@ -264,7 +264,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
 +++
-@snap[north]
+@snap[midpoint span-90]
 ![github-discussion](assets/img/github_issue.jpeg)
 @snapend
 
