@@ -1,6 +1,8 @@
-# Purpose
+# Discussing the `SettingwithCopyWarning` in Pandas
 
-Presentation made for "SettingwithCopyWarning" error in Pandas. 
+Link to presentation: https://gitpitch.com/tvasil/settingwithcopywarning#/
+
+Presentation made for "SettingwithCopyWarning" in Pandas. 
 
 ## Resources:
 - [Pandas documentation - indexing](https://pandas-docs.github.io/pandas-docs-travis/user_guide/indexing.html)
