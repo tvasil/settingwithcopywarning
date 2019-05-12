@@ -259,7 +259,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[1](If you're really know what you're doing, you can suppress the warning)
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
----?color=#9FEAA7
+---?color=#FFD221
 
 @snap[west contact-links]
 @css[thank-you](Thank you!)<br>
