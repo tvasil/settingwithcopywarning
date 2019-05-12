@@ -277,7 +277,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @snapend
 
 @snap[east span-50]
-![stayintouch](/assets/img/dragon.png)
+![stayintouch](/assets/img/dragon.jpg)
 @snapend
 
 
