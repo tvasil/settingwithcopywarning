@@ -260,6 +260,8 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[1](If you're really know what you're doing, you can suppress the warning)
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
+!img[github discussion](assets/img/PandasWarningIssue.gif)
+
 ---?color=#FFD221
 
 @snap[west contact-links]
@@ -270,12 +272,13 @@ pd.set_option('mode.chained_assignment', 'raise')
 <a href="https://github.com/tvasil/settingwithcopywarning">
 @fa[github-square pad-right-icon]@css[git-handle](tvasil/settingwithcopywarning)
 </a><br>
+<a href="https://slackin.pyladies.com/">
 @fa[slack pad-right-icon]@css[PyLadies Slack](PyLadies Slack: @tania)
 </a><br>
 @snapend
 
 @snap[east span-50]
-![](template/img/contact-1.png)
+![](assets/img/dragon.png)
 @snapend
 
 
