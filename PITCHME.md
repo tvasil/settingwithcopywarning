@@ -245,13 +245,10 @@ pd.set_option('mode.chained_assignment', 'raise')
 @title[Thank you]
 ## Thank you!
 
-@snap[west span-50]
-![github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-/tvasil
-![twitter](https://image.flaticon.com/icons/png/512/23/23681.png)
-twitter.com/tvasi
-![pyladies](https://cdn-images-1.medium.com/max/1600/1*Pc8QzOC5RNvDaXNGzzRWWg.png)
-@tania
+@snap[west span-10]
+![github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) /tvasil
+![twitter](https://image.flaticon.com/icons/png/512/23/23681.png) twitter.com/tvasi
+![pyladies](https://cdn-images-1.medium.com/max/1600/1*Pc8QzOC5RNvDaXNGzzRWWg.png) @tania
 @snapend
 
 
