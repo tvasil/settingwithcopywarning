@@ -248,7 +248,7 @@ df.loc[df.bidder == 'jake7870','bidderrate'] = 11
 ---
 @title[Suppress warning]
 
-@snap[north] 
+@snap[north span-90] 
 ### Extra: should I suppress the warning?
 @snapend
 #### My suggestion is NO
