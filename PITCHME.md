@@ -213,9 +213,9 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @title[Solution]
 
 @snap[north] 
-## Solutions
+### Solutions
 @snapend
-### 1. Use *.loc* to replace values <br>
+#### 1. Use *.loc* to replace values <br>
 
 @fa[thumbs-up fa-4x fragment]
 
@@ -223,9 +223,9 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @title[Solution2]
 
 @snap[north] 
-## Solutions
+### Solutions
 @snapend
-### 2. Make sure to create a copy when you really mean to!
+#### 2. Make sure to create a copy when you really mean to!
 
 ```python
 winners = df.loc[df.bid == df.price].copy()
@@ -236,9 +236,9 @@ winners = df.loc[df.bid == df.price].copy()
 @title[Solution3]
 
 @snap[north] 
-## Solutions
+### Solutions
 @snapend
-### 3. If you want to change the origal dataframe, do that directly
+#### 3. If you want to change the original dataframe, do that directly
 
 ```python
 df.loc[df.bidder == 'jake7870','bidderrate'] = 11
@@ -261,7 +261,9 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[1](If you're really know what you're doing, you can suppress the warning)
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
-!img[github discussion](assets/img/PandasWarningIssue.gif)
++++
+
+!img[github discussion](/assets/img/PandasWarningIssue.gif)
 
 ---?color=#FFD221
 
@@ -274,12 +276,12 @@ pd.set_option('mode.chained_assignment', 'raise')
 @fa[github-square pad-right-icon]@css[git-handle](tvasil/settingwithcopywarning)
 </a><br>
 <a href="https://slackin.pyladies.com/">
-@fa[slack pad-right-icon]@css[PyLadies Slack](PyLadies Slack: @tania)
+@fa[slack pad-right-icon]@css[pyladies-slack](PyLadies Slack: @tania)
 </a><br>
 @snapend
 
 @snap[east span-50]
-![](assets/img/dragon.png)
+![](/assets/img/dragon.png)
 @snapend
 
 
