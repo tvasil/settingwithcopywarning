@@ -281,7 +281,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @snapend
 
 @snap[east span-50]
-![stayintouch](assets/img/contact-1.png)
+![stayintouch](template/img/contact-1.png)
 @snapend
 
 
