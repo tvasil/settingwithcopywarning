@@ -194,6 +194,8 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @[8](the only slicing *guaranteed* to return a view and to refer to the original dataframe))
 
 +++?color=#C2E1C2
+
++++?color=#C2E1C2
 @title[Locations in memory]
 
 #### If you don't trust me, check the locations in memory
@@ -241,7 +243,7 @@ winners = df.loc[df.bid == df.price].copy()
 #### 3. If you want to change the original dataframe, do that directly
 
 ```python
-df.loc[df.bidder == 'jake7870','bidderrate'] = 11
+df.loc[555,'bidder'] = 'bikini4'
 ```
 @[1](Again, change by using *.loc*)
 
@@ -262,7 +264,9 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
 
 +++
+@snap[north]
 ![github-discussion](assets/img/github_issue.jpeg)
+@snapend
 
 ---?color=#FFD221
 
@@ -277,7 +281,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @snapend
 
 @snap[east span-50]
-![stayintouch](assets/img/dragon.jpg)
+![stayintouch](assets/img/contact-1.png)
 @snapend
 
 
