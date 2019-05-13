@@ -130,9 +130,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 
-@snap[north] 
 #### What happens when we use *[]* ?
-@snapend
 
 ```python
 >>> df[df.bidder == 'jake7870']['bidderrate'] = 11
