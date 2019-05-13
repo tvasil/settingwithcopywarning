@@ -12,7 +12,7 @@
 @title[The warning]
 # The problem
 +++?color=#C2E1C2
-@title[Intro to error]
+@title[Intro to the warning]
 @snap[north span-90] 
 #### Let's consider a simple example
 @snapend
@@ -80,24 +80,19 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 ```python
 >>> winners = df.loc[df.bid == df.price]
+
 ##a lot of other important stuff 
 ##(200 lines of code)
->>> winners.tail()
-      auctionid     bid   bidtime         bidder  bidderrate  openbid   price
-514  8215571039  150.00  2.997442     lambonius1           0    50.00  150.00
-515  8215571039  150.00  2.998437   analogkidd99           0    50.00  150.00
-531  8215582227  152.50  2.999664  ultimatum_man           2    60.00  152.50
-542  8215605488   61.00  2.586493     pgauctions          16     0.99   61.00
+
 555  8215610555   35.09  2.973264       biquÃni4         114     5.00   35.09
 
 >>> winners.loc[555, 'bidder'] = 'biquini4'
 ```
 
 @[1](Let's say now you want to only look at the auction winners)
-@[2-3](You create a new dataframe and forget about the old one, while working on other code)
-@[4-10](Suddenly you check out the data again and see there was some encoding error)
-@[10](and it really bothers you)
-@[10-12](so you just go ahead and replace it with *.loc*)
+@[3-4](You create a new dataframe and forget about the old one, while working on other code)
+@[6](Then you suddenly come across encoding error, and it really bothers you)
+@[8](so you just go ahead and replace it with *.loc*)
 
 +++?color=#C2E1C2
 @title[Chained assignment2]
@@ -135,7 +130,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 
-@snap[north span-90] 
+@snap[north] 
 #### So what happens when we use *[]* ?
 @snapend
 
@@ -195,7 +190,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 
 +++?color=#C2E1C2
 @title[So what about our original example?]
-### So what happens in our original example?
+#### So what really happened in our second example?
 
 ```python
 winners = df.loc[df.bid == df.price]
@@ -207,7 +202,7 @@ df.loc[df.big == df.price].loc[555,'bidder'] = 'bikini4'
 ```
 
 @[1-2](Our original creation of winners is a hidden chained assignenment]
-@[4-6](Which is actually equivalent to this, two chained .loc operations)
+@[4-6](Which is actually equivalent to this, two chained *.loc* operations)
 
 +++?color=#C2E1C2
 
@@ -231,23 +226,27 @@ df.loc[df.big == df.price].loc[555,'bidder'] = 'bikini4'
 
 @snap[north] 
 ### Solutions
-@snapend
 #### 1. Use *.loc* to replace values <br>
+@snapend
 
+@snap[midpoint span-100]
 @fa[thumbs-up fa-4x fragment]
-
+@snapend
 +++
 @title[Solution2]
 
 @snap[north] 
 ### Solutions
-@snapend
 #### 2. Make sure to create a copy when you really mean to!
+@snapend
+
+@snap[midpoint span-100 fragment]
 
 ```python
 winners = df.loc[df.bid == df.price].copy()
 ```
 @[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
+@snapend
 
 +++
 @title[Solution3]
@@ -304,7 +303,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @snapend
 
 @snap[east span-50]
-![stayintouch](template/img/contact-1.png)
+![stayintouch](assets/img/contact-1.png)
 @snapend
 
 
