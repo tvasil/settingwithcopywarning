@@ -241,8 +241,7 @@ df.loc[df.big == df.price].loc[555,'bidder'] = 'bikini4'
 @snapend
 
 @snap[midpoint span-100 fragment]
-
-```python
+```
 winners = df.loc[df.bid == df.price].copy()
 ```
 @[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
