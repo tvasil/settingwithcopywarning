@@ -266,7 +266,9 @@ df.loc[555,'bidder'] = 'bikini4'
 @snap[north span-90] 
 ### Extra: should I suppress the warning?
 @snapend
-#### My suggestion is NO
+
+@css[text-h4 fragment](For the love of Pandas)
+@css[text-h4 fragment](**NO**)
 
 
 ```python
@@ -281,7 +283,7 @@ pd.set_option('mode.chained_assignment', 'raise')
 @title[The conversation on GitHub]
 
 @snap[north span-90] 
-#### The Pandas community is considering changing the default to Exception
+#### (in fact Pandas project is considering changing the default to **exception**)
 @snapend
 
 @snap[midpoint span-90]
