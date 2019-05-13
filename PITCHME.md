@@ -130,7 +130,7 @@ using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 
-#### What happens when we use *[]* ?
+#### What happens when we use *[]*?
 
 ```python
 >>> df[df.bidder == 'jake7870']['bidderrate'] = 11
@@ -274,8 +274,8 @@ pd.set_option('mode.chained_assignment', None)
 
 pd.set_option('mode.chained_assignment', 'raise')
 ```
-@[1](If you're really know what you're doing, you can suppress the warning)
-@[3](Or elevate it to an exception if you're writing production code and want to catch this issue)
+@[1](If you really know what you're doing, you can suppress the warning)
+@[3](or elevate it to an exception if you're writing production code and want to catch this issue)
 
 +++
 @title[The conversation on GitHub]
