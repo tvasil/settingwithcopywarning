@@ -131,7 +131,7 @@ using .loc[row_indexer,col_indexer] = value instead
 +++?color=#C2E1C2
 
 @snap[north] 
-#### So what happens when we use *[]* ?
+#### What happens when we use *[]* ?
 @snapend
 
 ```python
@@ -190,7 +190,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 
 +++?color=#C2E1C2
 @title[So what about our original example?]
-#### So what really happened in our second example?
+#### So what *really* happened in our second example?
 
 ```python
 winners = df.loc[df.bid == df.price]
