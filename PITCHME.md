@@ -1,8 +1,9 @@
 ---?color=linear-gradient(180deg, white 50%, #FFD221 50%)
-@snap[north-west span-12]
-![pandas](assets/img/pandas_logo.png)
+@title[Intro]
 
-@title[Title Slide]
+@snap[north-west span-20]
+![pandas](assets/img/pandas_logo.png)
+@snapend
 
 @snap[west text-bold]
 ### @color[#2D2D2D](`SettingwithCopyWarning`)   @fa[tired]
