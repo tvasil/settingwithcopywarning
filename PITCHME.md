@@ -210,17 +210,6 @@ pd.set_option('mode.chained_assignment', 'raise')
 @[1](If you really know what you're doing, you can suppress the warning)
 @[3](or elevate it to an exception if you're writing production code and want to catch this issue)
 
-+++
-@title[The conversation on GitHub]
-
-@snap[north span-100] 
-##### in fact the Pandas project is considering changing the default to **exception**
-@snapend
-
-@snap[midpoint span-90]
-![github-discussion](assets/img/github_issue.jpeg)
-@snapend
-
 ---?color=#FFD221
 @title[Stay in touch!]
 
