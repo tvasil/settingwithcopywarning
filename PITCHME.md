@@ -1,4 +1,7 @@
 ---?color=linear-gradient(180deg, white 50%, #FFD221 50%)
+@snap[north-west span-12]
+![pandas](assets/img/pandas_logo.png)
+
 @title[Title Slide]
 
 @snap[west text-bold]
