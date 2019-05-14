@@ -66,56 +66,6 @@ Try using .loc[row_indexer,col_indexer] = value instead
 ### Victory!
 ![Victory](https://media.giphy.com/media/JlVb5LVZ4y5Uc/giphy.gif)
 
-+++?color=white
-@title[Not so fast]
-### not so fast...
-![Cersei](https://media.giphy.com/media/VIu9jzc36itzy/giphy.gif)
-
-
-+++?color=#C2E1C2
-@title[Chained assignment]
-@snap[north span-95] 
-#### A more realistic example
-@snapend
-
-```python
->>> winners = df.loc[df.bid == df.price]
-
-##a lot of other important stuff 
-##(200 lines of code)
-
-555  8215610555   35.09  2.973264       biquÃni4         114     5.00   35.09
-
->>> winners.loc[555, 'bidder'] = 'biquini4'
-```
-
-@[1](Let's say now you want to only look at the auction winners)
-@[3-4](You create a new dataframe and forget about the old one, while working on other code)
-@[6](Then you suddenly come across encoding error, and it really bothers you)
-@[8](so you just go ahead and replace it with *.loc*)
-
-+++?color=#C2E1C2
-@title[Chained assignment2]
-@snap[north span-90] 
-#### A more realistic example
-@snapend
-
-```python3
-/Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
-core/indexing.py:543: SettingWithCopyWarning: A value is 
-trying to be set on a copy of a slice from a DataFrame.Try 
-using .loc[row_indexer,col_indexer] = value instead
-
-```
-@[1-4](but you get the warning again!)
-
-
-+++?color=#C2E1C2
-@title[But I used .loc]
-
-### But I used .loc...
-![why](https://media.giphy.com/media/1M9fmo1WAFVK0/giphy.gif)
-
 ---
 @title[The actual problem]
 @css[text-h3](The actual problem)
