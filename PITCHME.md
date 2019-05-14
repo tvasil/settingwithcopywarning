@@ -1,7 +1,7 @@
 ---?color=linear-gradient(180deg, white 50%, #FFD221 50%)
 @title[Intro]
 
-@snap[north-west span-20]
+@snap[north-west span-30]
 ![pandas](assets/img/pandas_logo.png)
 @snapend
 
