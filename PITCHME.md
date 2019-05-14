@@ -213,8 +213,8 @@ pd.set_option('mode.chained_assignment', 'raise')
 +++
 @title[The conversation on GitHub]
 
-@snap[north] 
-##### (in fact the Pandas project is considering changing the default to **exception**)
+@snap[north span-100] 
+##### in fact the Pandas project is considering changing the default to **exception**
 @snapend
 
 @snap[midpoint span-90]
