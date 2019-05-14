@@ -17,7 +17,7 @@
 # The problem
 +++?color=#C2E1C2
 @title[Intro to the warning]
-@snap[north span-90] 
+@snap[north-west span-90] 
 #### Let's consider a simple example
 @snapend
 
@@ -49,7 +49,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#C2E1C2
 @title[Let's fix it]
-@snap[north span-90] 
+@snap[north-west span-90] 
 #### Let's fix it
 @snapend
 
@@ -79,12 +79,17 @@ Try using .loc[row_indexer,col_indexer] = value instead
 +++?color=#C2E1C2
 @title[View vs copy]
 
+@snap[north-west]
 #### View vs Copy
+@snapend
+
 @img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
 
-+++?color=#C2E1C2
 
++++?color=#C2E1C2
+@snap[north-west]
 #### What happens when we use *[]*?
+@snapend
 
 ```python
 >>> df[df.bidder == 'jake7870']['bidderrate'] = 11
@@ -102,8 +107,9 @@ NaN
 
 +++?color=#C2E1C2
 @title[What happens under the hood]
-
+@snap[north-west]
 #### Chained assignment
+@snapend
 
 ```python
 # Code you write
@@ -124,7 +130,9 @@ df.__getitem__(df.__getitem__('bidder') == 'jake7870')
 +++?color=#C2E1C2
 @title[But if you use .loc]
 
+@snap[north-west]
 #### and now with *.loc* notation
+@snapend
 
 ```python
 # Code you write
@@ -205,8 +213,8 @@ pd.set_option('mode.chained_assignment', 'raise')
 +++
 @title[The conversation on GitHub]
 
-@snap[north span-90] 
-#### (in fact Pandas project is considering changing the default to **exception**)
+@snap[north] 
+##### (in fact the Pandas project is considering changing the default to **exception**)
 @snapend
 
 @snap[midpoint span-90]
