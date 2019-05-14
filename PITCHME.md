@@ -172,12 +172,10 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 #### 2. Make sure to create a copy when you really mean to!
 @snapend
 
-@snap[midpoint span-100 fragment]
 ```
-winners = df.loc[df.bid == df.price].copy()
+df2 = df.loc[df.bid == df.price].copy()
 ```
-@[1](If you're only gonna work on `winners` from now on, make an explicit copy!)
-@snapend
+@[1](If you're only going to work on `df2` from now on, make an explicit copy!)
 
 +++
 @title[Solution3]
@@ -188,9 +186,15 @@ winners = df.loc[df.bid == df.price].copy()
 #### 3. If you want to change the original dataframe, do that directly
 
 ```python
-df.loc[555,'bidder'] = 'bikini4'
+## instead of this
+df2 = df.loc[df.bid == df.price]
+df2.loc[df.bidder == 'jake7870', 'bidderrate'] = 11
+
+## do this!
+df.loc[df.bidder == 'jake7870', 'bidderrate'] = 11
 ```
-@[1](Again, change by using *.loc*)
+@[1-3](DON'T do this!)
+@[5-6](Do *this* instead!)
 
 +++
 @title[Should I suppress warnings?]
