@@ -140,27 +140,10 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 @[4-6](Only executes a **set** operation)
 @[8](the only slicing *guaranteed* to return a view and to refer to the original dataframe))
 
-+++?color=#C2E1C2
-
-@title[Locations in memory]
-
-#### If you don't trust me, check the locations in memory
-
-```python
->>> id(df[df.bidder == 'jake7870']['bidderrate'])
-4638136584
-
->>> id(df.loc[df.bidder == 'jake7870', 'bidderrate'])
-112051366544
-```
-@[1-2](Location of intermediate object)
-@[4-6](Location of the view into the original df)
-@[1-6]
-
 ---
 @title[Solution]
 
-@snap[north] 
+@snap[north-west] 
 ### Solutions
 #### 1. Use *.loc* to replace values <br>
 @snapend
@@ -171,28 +154,28 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 +++
 @title[Solution2]
 
-@snap[north] 
+@snap[north-west] 
 ### Solutions
 #### 2. Make sure to create a copy when you really mean to!
 @snapend
 
-```
-df2 = df.loc[df.bid == df.price].copy()
+```python
+winners = df.loc[df.bid == df.price].copy()
 ```
 @[1](If you're only going to work on `df2` from now on, make an explicit copy!)
 
 +++
 @title[Solution3]
 
-@snap[north] 
+@snap[north-west] 
 ### Solutions
-@snapend
 #### 3. If you want to change the original dataframe, do that directly
+@snapend
 
 ```python
 ## instead of this
-df2 = df.loc[df.bid == df.price]
-df2.loc[df.bidder == 'jake7870', 'bidderrate'] = 11
+winners = df.loc[df.bid == df.price]
+winners.loc[df.bidder == 'jake7870', 'bidderrate'] = 11
 
 ## do this!
 df.loc[df.bidder == 'jake7870', 'bidderrate'] = 11
@@ -203,7 +186,7 @@ df.loc[df.bidder == 'jake7870', 'bidderrate'] = 11
 +++
 @title[Should I suppress warnings?]
 
-@snap[north span-90] 
+@snap[north-west] 
 ### Extra: should I suppress the warning?
 @snapend
 
