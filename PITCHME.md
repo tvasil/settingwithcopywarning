@@ -21,7 +21,7 @@
 #### Let's consider a simple example
 @snapend
 
-```
+```python
 >>> import pandas as pd
 >>> df = pd.read_csv('Xbox 3-day auctions.csv')
 >>> df.head()
@@ -33,19 +33,20 @@
 4  8213060420    2.0  0.065266      donnie4814           5      1.0  120.0
 
 >>> df[df.bidder == 'jake7870']['bidderrate'] = 11
-
-/Users/tania/anaconda3/lib/python3.6/site-packages/
-ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
-is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
 ```
-
 @[1-2](You load your dataset)
 @[3-9](You check it out)
 @[5](Oh no! looks like there's a NaN for jake7870)
 @[11](You decide to tackle the problem the best way you know)
 @[13-16](Until this warning appears)
 @[16](But wait! It tells us what to do!)
+
+```md
+/Users/tania/anaconda3/lib/python3.6/site-packages/
+ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
+is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+```
 
 +++?color=#C2E1C2
 @title[Let's fix it]
