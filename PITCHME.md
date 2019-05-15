@@ -34,16 +34,15 @@
 
 >>> df[df.bidder == 'jake7870']['bidderrate'] = 11
 
-/Users/tania/anaconda3/lib/python3.6/site-packages/
-ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
-is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
+SettingWithCopyWarning: A value is trying to be set 
+on a copy of a slice from a DataFrame. Try using 
+.loc[row_indexer,col_indexer] = value instead
 ```
 @[1-2](You load your dataset)
 @[3-9](You check it out)
 @[5](Oh no! looks like there's a NaN for jake7870)
 @[11](You decide to tackle the problem the best way you know)
-@[13-16](Until this warning appears)
+@[13-15](Until this warning appears)
 @[16](But wait! It tells us what to do!)
 
 +++?color=#e8f9e8
@@ -77,7 +76,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#e8f9e8
 @title[Chained assignment]
-@snap[north span-95] 
+@snap[north-west span-95] 
 #### A more realistic example
 @snapend
 
@@ -99,18 +98,17 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 +++?color=#e8f9e8
 @title[Chained assignment2]
-@snap[north span-90] 
+@snap[north-west span-90] 
 #### A more realistic example
 @snapend
 
 ```python3
-/Users/tania/anaconda3/lib/python3.6/site-packages/pandas/
-core/indexing.py:543: SettingWithCopyWarning: A value is 
-trying to be set on a copy of a slice from a DataFrame.Try 
-using .loc[row_indexer,col_indexer] = value instead
+SettingWithCopyWarning: A value is trying to be set 
+on a copy of a slice from a DataFrame. Try using 
+.loc[row_indexer,col_indexer] = value instead
 
 ```
-@[1-4](but you get the warning again!)
+@[1-3](but you get the warning again!)
 
 
 +++?color=#e8f9e8
@@ -144,16 +142,15 @@ using .loc[row_indexer,col_indexer] = value instead
 ```
 >>> df[df.bidder == 'jake7870']['bidderrate'] = 11
 
-/Users/tania/anaconda3/lib/python3.6/site-packages/
-ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
-is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
+SettingWithCopyWarning: A value is trying to be set 
+on a copy of a slice from a DataFrame. Try using 
+.loc[row_indexer,col_indexer] = value instead
 
 >>> df[df.bidder == 'jake7870']['bidderrate']
 NaN
 ```
-@[1-6](While we thought we're modifying the original dataframe...)
-@[8-9](Only an intermediary object is actually modified)
+@[1-5](While we thought we're modifying the original dataframe...)
+@[7-8](Only an intermediary object (a copy!) is actually modified)
 
 +++?color=#e8f9e8
 @title[What happens under the hood]
