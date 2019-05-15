@@ -21,7 +21,7 @@
 #### Let's consider a simple example
 @snapend
 
-```
+```python
 >>> import pandas as pd
 >>> df = pd.read_csv('xbox_ebay_auctions.csv')
 >>> df.head()
@@ -51,7 +51,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 #### Let's fix it
 @snapend
 
-```
+```python
 >>> df.loc[df.bidder == 'jake','bidderrate'] = 11
 # Notice the surprising lack of warnings! :D
 
@@ -80,7 +80,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 #### A more realistic example
 @snapend
 
-```
+```python
 >>> winners = df.loc[df.bid == df.price]
 
 ##a lot of other important stuff 
@@ -139,7 +139,7 @@ on a copy of a slice from a DataFrame. Try using
 #### What happens when we use *[]*?
 @snapend
 
-```
+```python
 >>> df[df.bidder == 'jake']['bidderrate'] = 11
 
 SettingWithCopyWarning: A value is trying to be set 
@@ -166,7 +166,7 @@ df[df.bidder == 'jake']['bidderrate'] = 11
 df.__getitem__(df.__getitem__('bidder') == 'jake')
 .__setitem__('bidderrate', 11)
 
-# IS THIS A COPY? A VIEW?
+# IS IT A COPY? A VIEW?
 ```
 
 @[1-2](Square bracket notation)
