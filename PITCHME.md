@@ -167,7 +167,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake',
 ```python
 winners = df.loc[df.bid == df.price].copy()
 ```
-@[1](If you're only going to work on `df2` from now on, make an explicit copy)
+@[1](If you're only going to work on `winners` from now on, make an explicit copy)
 
 +++
 @title[Solution3]
