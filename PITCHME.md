@@ -15,7 +15,7 @@
 ---
 @title[The warning]
 # The problem
-+++?color=#E0E2DB
++++?color=#e8f9e8
 @title[Intro to the warning]
 @snap[north-west span-90] 
 #### Let's consider a simple example
@@ -33,6 +33,11 @@
 4  8213060420    2.0  0.065266      donnie4814           5      1.0  120.0
 
 >>> df[df.bidder == 'jake7870']['bidderrate'] = 11
+
+/Users/tania/anaconda3/lib/python3.6/site-packages/
+ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
+is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
 ```
 @[1-2](You load your dataset)
 @[3-9](You check it out)
@@ -41,14 +46,7 @@
 @[13-16](Until this warning appears)
 @[16](But wait! It tells us what to do!)
 
-```md
-/Users/tania/anaconda3/lib/python3.6/site-packages/
-ipykernel_launcher.py:1: SettingWithCopyWarning: A value 
-is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-```
-
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @title[Let's fix it]
 @snap[north-west span-90] 
 #### Let's fix it
