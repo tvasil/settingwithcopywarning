@@ -100,7 +100,7 @@ on a copy of a slice from a DataFrame. Try using
 NaN
 ```
 @[1-5](While we thought we're modifying the original dataframe...)
-@[7-8](Only an intermediary object (a copy!) is actually modified)
+@[7-8](Only an intermediary object -- a copy! -- is actually modified)
 
 +++?color=#e8f9e8
 @title[What happens under the hood]
