@@ -75,7 +75,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 ![Cersei](https://media.giphy.com/media/VIu9jzc36itzy/giphy.gif)
 
 
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @title[Chained assignment]
 @snap[north span-95] 
 #### A more realistic example
@@ -97,7 +97,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 @[6](Then you suddenly come across encoding error, and it really bothers you)
 @[8](so you just go ahead and replace it with *.loc*)
 
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @title[Chained assignment2]
 @snap[north span-90] 
 #### A more realistic example
@@ -113,7 +113,7 @@ using .loc[row_indexer,col_indexer] = value instead
 @[1-4](but you get the warning again!)
 
 
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @title[But I used .loc]
 
 ### But I used .loc...
@@ -126,7 +126,7 @@ using .loc[row_indexer,col_indexer] = value instead
 @css[text-h3 fragment](is all about *view* vs *copy*)
 @css[text-h3 fragment](and *chained assignment*)
 
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @title[View vs copy]
 
 @snap[north-west]
@@ -136,7 +136,7 @@ using .loc[row_indexer,col_indexer] = value instead
 @img[fragment](https://www.dataquest.io/wp-content/uploads/2019/01/modifying.png)
 
 
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @snap[north-west]
 #### What happens when we use *[]*?
 @snapend
@@ -155,7 +155,7 @@ NaN
 @[1-6](While we thought we're modifying the original dataframe...)
 @[8-9](Only an intermediary object is actually modified)
 
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @title[What happens under the hood]
 @snap[north-west]
 #### Chained assignment
@@ -175,9 +175,9 @@ df.__getitem__(df.__getitem__('bidder') == 'jake7870')
 @[1-2](Square bracket notation)
 @[4-6](Actually executes both a **get** and a **set** operation)
 @[5](What is this object?)
-@[8](nobody knows)
+@[1-8](nobody knows)
 
-+++?color=#C2E1C2
++++?color=#e8f9e8
 @title[But if you use .loc]
 
 @snap[north-west]
@@ -192,11 +192,11 @@ df.loc[df.bidder == 'jake7870','bidderrate'] = 11
 df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 'bidderrate'), 11)
 
-# THIS IS GUARANTEED TO BE A VIEW
+# THIS IS GUARANTEED TO CHANGE THE ORIGINAL DF
 ```
 @[1-2](*.loc* notation)
 @[4-6](Only executes a **set** operation)
-@[8](the only slicing *guaranteed* to return a view and to refer to the original dataframe))
+@[1-8](the only slicing *guaranteed* to return a view and to refer to the original dataframe))
 
 ---
 @title[Solution]
@@ -220,7 +220,7 @@ df.loc.__setitem__((df.__getitem__('bidder') == 'jake7870',
 ```python
 winners = df.loc[df.bid == df.price].copy()
 ```
-@[1](If you're only going to work on `df2` from now on, make an explicit copy!)
+@[1](If you're only going to work on `df2` from now on, make an explicit copy)
 
 +++
 @title[Solution3]
