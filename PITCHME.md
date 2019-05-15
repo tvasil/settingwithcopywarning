@@ -35,15 +35,15 @@
 >>> df[df.bidder == 'jake']['bidderrate'] = 11
 
 SettingWithCopyWarning: A value is trying to be set 
-on a copy of a slice from a DataFrame. Try using 
-.loc[row_indexer,col_indexer] = value instead
+on a copy of a slice from a DataFrame. 
+Try using .loc[row_indexer,col_indexer] = value instead
 ```
 @[1-2](You load your dataset)
 @[3-9](You check it out)
 @[5](Oh no! looks like there's a NaN for jake)
 @[11](You decide to tackle the problem the best way you know)
 @[13-15](Until this warning appears)
-@[16](But wait! It tells us what to do!)
+@[15](But wait! It tells us what to do!)
 
 +++?color=#e8f9e8
 @title[Let's fix it]
